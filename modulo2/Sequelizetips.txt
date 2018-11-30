@@ -1,0 +1,5 @@
+criar migration
+npx sequelize migration:create --name=create-nome-da-tabela
+
+// cria no banco de dados
+npx sequelize db:migrate
