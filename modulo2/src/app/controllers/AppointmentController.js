@@ -17,6 +17,8 @@ class AppointmentController {
       date
     })
 
+    req.flash('success', 'Agendamento realizado com sucesso!')
+
     return res.redirect('/app/dashboard')
   }
 }
