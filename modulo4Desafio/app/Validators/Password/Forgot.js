@@ -2,21 +2,21 @@
 
 const Antl = use('Antl')
 
-class ForgotPassword {
-  get validateAll() {
+class Forgot {
+  get validateAll () {
     return true
   }
 
-  get rules() {
+  get rules () {
     return {
       email: 'required|email',
       redirect_url: 'required|url'
     }
   }
 
-  get messages() {
+  get messages () {
     return Antl.list('validation')
   }
 }
 
-module.exports = ForgotPassword
+module.exports = Forgot

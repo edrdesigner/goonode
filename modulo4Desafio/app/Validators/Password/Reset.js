@@ -2,21 +2,21 @@
 
 const Antl = use('Antl')
 
-class ResetPassword {
-  get validateAll() {
+class Reset {
+  get validateAll () {
     return true
   }
 
-  get rules() {
+  get rules () {
     return {
       token: 'required',
       password: 'required|confirmed'
     }
   }
 
-  get messages() {
+  get messages () {
     return Antl.list('validation')
   }
 }
 
-module.exports = ResetPassword
+module.exports = Reset

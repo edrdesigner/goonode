@@ -18,7 +18,6 @@ adonis new yardstick --api-only
 
 or manually clone the repo and then run `npm install`.
 
-
 ### Migrations
 
 Run the following command to run startup migrations.
@@ -26,3 +25,11 @@ Run the following command to run startup migrations.
 ```js
 adonis migration:run
 ```
+
+### Generate App Key
+
+- Run `adonis key:generate` to re-generate the APP_KEY and save it inside the .env file.
+
+## Docker com redis
+
+- Run `docker run --name redis -p 6379:6379 -d redis:alpine`
