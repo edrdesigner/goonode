@@ -20,7 +20,7 @@ Route.get('/', () => {
   return { greeting: 'Hello world in JSON' }
 })
 
-Route.post('users', 'UserController.store').validator('User')
+Route.post('users', 'UserController.store').validator('User/Store')
 
 Route.post('sessions', 'SessionController.store').validator('Session')
 
@@ -42,11 +42,9 @@ Route.group(() => {
       ])
     )
 
-  // @todo
-  /*
-    Route.post('events/:events_id/share', 'ShareEventController.share').validator(
+  Route.post('events/:events_id/share', 'ShareEventController.share').validator(
     'Event/Share'
-  ) */
+  )
 
   Route.put('users/:id', 'UserController.update').validator('User/Update')
 }).middleware(['auth'])

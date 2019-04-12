@@ -23,7 +23,8 @@ class EventController {
   async index ({ request, response }) {
     const { page, date } = request.get()
 
-    let query = Event.query().with('user')
+    let query = Event.query()
+      .with('user')
 
     if (date) {
       query = query.whereRaw(`"when"::date = ?`, date)
