@@ -16,16 +16,12 @@ class ShareEventMail {
 
   // This is where the work is done.
   async handle ({ email, username, event }) {
-    await Mail.send([
-      'mails.share_event',
-      { username, event },
-      message => {
-        message
-          .to(email)
-          .from('oi@edrdesigner.com', 'edrdesigner')
-          .subject(`Evento ${event.name}`)
-      }
-    ])
+    await Mail.send(['emails.share_event'], { username, event }, message => {
+      message
+        .to(email)
+        .from('oi@rocketseat.com.br', 'Rocketseat')
+        .subject(`Evento: ${event.name}`)
+    })
   }
 }
 

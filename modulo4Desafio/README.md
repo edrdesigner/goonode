@@ -30,6 +30,14 @@ adonis migration:run
 
 - Run `adonis key:generate` to re-generate the APP_KEY and save it inside the .env file.
 
+## Listen kue jobs
+
+- Run `adonis kue:listen`
+
+## Start dev server
+
+- Run `adonis serve --dev` to run the server
+
 ## Docker com redis
 
 - Run `docker run --name redis -p 6379:6379 -d redis:alpine`

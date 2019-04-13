@@ -42,7 +42,7 @@ Route.group(() => {
       ])
     )
 
-  Route.post('events/:events_id/share', 'ShareEventController.share').validator(
+  Route.post('events/:event_id/share', 'ShareEventController.share').validator(
     'Event/Share'
   )
 

@@ -11,9 +11,7 @@ class Update {
 
   get rules () {
     return {
-      name: 'required',
-      where: 'required',
-      when: [rule('required'), rule('date_format', 'YYYY-MM-DD HH:mm:ss')]
+      when: [rule('date_format', 'YYYY-MM-DD HH:mm:ss')]
     }
   }
 
