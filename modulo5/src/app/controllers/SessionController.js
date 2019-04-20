@@ -1,4 +1,5 @@
 const { User } = require("../models");
+const Mail = require("../services/MailService");
 
 class SessionController {
   async store(req, res) {
@@ -13,6 +14,13 @@ class SessionController {
     if (!(await user.checkPassword(password))) {
       return res.status(401).json({ message: "Incorrect password" });
     }
+
+    await Mail.send({
+      from: "Eduardo R <teste@gmail.com>",
+      to: `${user.name} <${user.email}>`,
+      subject: "Novo acesso em sua conta",
+      text: "Fala dev..."
+    });
 
     // return res.status(200).send();
     return res.json({
