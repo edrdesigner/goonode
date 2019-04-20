@@ -1,0 +1,442 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2019-04-13T20:47:23.177Z",
+	"__export_source": "insomnia.desktop.app:v6.3.2",
+	"resources": [
+		{
+			"_id": "wrk_53f9c1b234394093b32cfed5e25221c4",
+			"created": 1555161854036,
+			"description": "",
+			"modified": 1555161854036,
+			"name": "GoNode4Desafio",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_2c8081e6825e481183751432378c676a",
+			"color": null,
+			"created": 1555161854374,
+			"data": {
+				"base_url": "http://localhost:3333",
+				"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImlhdCI6MTU1NTE4NjkzOX0.LFUpfTU6R97RjyBPb1eX3tVh-fMjQAk7RInCcm3WAd8"
+			},
+			"isPrivate": false,
+			"metaSortKey": 1555161854374,
+			"modified": 1555186995798,
+			"name": "New Environment",
+			"parentId": "wrk_53f9c1b234394093b32cfed5e25221c4",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_31aed1a671b2436981acfefe304257fd",
+			"cookies": [],
+			"created": 1555161854378,
+			"modified": 1555161854378,
+			"name": "Default Jar",
+			"parentId": "wrk_53f9c1b234394093b32cfed5e25221c4",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_5492ab56f9bb49b9aef915a28d114e88",
+			"created": 1555161943524,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1549339905943.25,
+			"modified": 1555161964147,
+			"name": "Users",
+			"parentId": "wrk_53f9c1b234394093b32cfed5e25221c4",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_0c7dedd1f4bc4dd194420aa635f72a52",
+			"created": 1555161974673,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1552742028820.25,
+			"modified": 1555161974688,
+			"name": "ForgotPassword",
+			"parentId": "wrk_53f9c1b234394093b32cfed5e25221c4",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_e57b61f1119b447c848731e0376da423",
+			"created": 1555161990295,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1552742253646.75,
+			"modified": 1555161990307,
+			"name": "Session",
+			"parentId": "wrk_53f9c1b234394093b32cfed5e25221c4",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_cff681ab00244f1c8acbfa347a964127",
+			"created": 1555162058912,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1553051533286,
+			"modified": 1555162074814,
+			"name": "Events",
+			"parentId": "wrk_53f9c1b234394093b32cfed5e25221c4",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_6fd926238dff43859b4b79b29f4ab4af",
+			"created": 1555162209623,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1552742197440.125,
+			"modified": 1555162215328,
+			"name": "ShareEvent",
+			"parentId": "wrk_53f9c1b234394093b32cfed5e25221c4",
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_18829e6cfde0420dae790c18d0fb2af8",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"username\": \"edrdesigner\",\n\t\"email\": \"edrdesigner@gmail.com\",\n\t\"password\": \"123\",\n\t\"password_confirmation\": \"123\"\n}"
+			},
+			"created": 1555161943527,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_86009bc30309412f976f6d84ce58baf4",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1552741934148,
+			"method": "POST",
+			"modified": 1555164681534,
+			"name": "Create",
+			"parameters": [],
+			"parentId": "fld_5492ab56f9bb49b9aef915a28d114e88",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/users",
+			"_type": "request"
+		},
+		{
+			"_id": "req_886be36e947f46f5a64fb4c93d70edf2",
+			"authentication": {
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"username\": \"eduardo2\",\n\t\"password\": \"123\",\n\t\"password_confirmation\": \"123\",\n\t\"password_old\": \"1234\"\n}"
+			},
+			"created": 1555162138221,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_86009bc30309412f976f6d84ce58baf4",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1551381127640.75,
+			"method": "PUT",
+			"modified": 1555165062407,
+			"name": "Update",
+			"parameters": [],
+			"parentId": "fld_5492ab56f9bb49b9aef915a28d114e88",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/users/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_6e1daccc83284167a35987b46a8556a5",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"email\": \"teste@gmail.com\"\n}"
+			},
+			"created": 1555161974676,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_86009bc30309412f976f6d84ce58baf4",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1550020321133.5,
+			"method": "POST",
+			"modified": 1555161974676,
+			"name": "Create",
+			"parameters": [],
+			"parentId": "fld_0c7dedd1f4bc4dd194420aa635f72a52",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/passwords",
+			"_type": "request"
+		},
+		{
+			"_id": "req_959ed3fe68be4054a5c61934b1af4da5",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"token\": \"ca94f234fb0b9f63252e\",\n\t\"password\": \"123123\"\n}"
+			},
+			"created": 1555161974680,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_86009bc30309412f976f6d84ce58baf4",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1548659514626.25,
+			"method": "PUT",
+			"modified": 1555161974680,
+			"name": "Update",
+			"parameters": [],
+			"parentId": "fld_0c7dedd1f4bc4dd194420aa635f72a52",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/passwords",
+			"_type": "request"
+		},
+		{
+			"_id": "req_5f6c14ae11fb47f980b216ca7860c3a5",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"email\": \"testew22@gmail.com\",\n\t\"password\": \"123\"\n}"
+			},
+			"created": 1555161990300,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_86009bc30309412f976f6d84ce58baf4",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1550020321133.5,
+			"method": "POST",
+			"modified": 1555164534063,
+			"name": "Create",
+			"parameters": [],
+			"parentId": "fld_e57b61f1119b447c848731e0376da423",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/sessions",
+			"_type": "request"
+		},
+		{
+			"_id": "req_cad67f30b659477986ecce02dd5f1684",
+			"authentication": {
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"Estudar node\",\n\t\"where\": \"Casa\",\n\t\"when\": \"2019-04-13 16:30:00\"\n}"
+			},
+			"created": 1555162058916,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_86009bc30309412f976f6d84ce58baf4",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1553506309054,
+			"method": "POST",
+			"modified": 1555187029103,
+			"name": "Create",
+			"parameters": [],
+			"parentId": "fld_cff681ab00244f1c8acbfa347a964127",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/events",
+			"_type": "request"
+		},
+		{
+			"_id": "req_24c3010068784db6b8c8f271845f2cc4",
+			"authentication": {
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"Almoço de cachorro quente na sogra\",\n\t\"where\": \"Casa da sogra\",\n\t\"when\": \"2019-04-13 12:00:00\"\n}"
+			},
+			"created": 1555162058921,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_86009bc30309412f976f6d84ce58baf4",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1553183428302,
+			"method": "PUT",
+			"modified": 1555165534364,
+			"name": "Update",
+			"parameters": [],
+			"parentId": "fld_cff681ab00244f1c8acbfa347a964127",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/events/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_af69f541d0b64e06a0c3d202263a5807",
+			"authentication": {
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1555162058923,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1553344868678,
+			"method": "GET",
+			"modified": 1555162090004,
+			"name": "Index",
+			"parameters": [],
+			"parentId": "fld_cff681ab00244f1c8acbfa347a964127",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/events/?page=1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_ecd15a2d3fe54b639bf1004980bb005e",
+			"authentication": {
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1555162058926,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1553264148490,
+			"method": "GET",
+			"modified": 1555162095314,
+			"name": "Show",
+			"parameters": [],
+			"parentId": "fld_cff681ab00244f1c8acbfa347a964127",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/events/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_df537ff6facd44e58ef8068b8e164649",
+			"authentication": {
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1555162058930,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1553223788396,
+			"method": "DELETE",
+			"modified": 1555165312602,
+			"name": "Delete",
+			"parameters": [],
+			"parentId": "fld_cff681ab00244f1c8acbfa347a964127",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/events/3",
+			"_type": "request"
+		},
+		{
+			"_id": "req_fd85841c74bf4275b6f99fdc68cdcf51",
+			"authentication": {
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"email\": \"teste@gmail.com\"\n}"
+			},
+			"created": 1555162209626,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_86009bc30309412f976f6d84ce58baf4",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1550020321133.5,
+			"method": "POST",
+			"modified": 1555187562202,
+			"name": "Share",
+			"parameters": [],
+			"parentId": "fld_6fd926238dff43859b4b79b29f4ab4af",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/events/2/share",
+			"_type": "request"
+		}
+	]
+}
